@@ -7,7 +7,13 @@
 </p>
 
 <p align="center">
-  <a href="https://lissajouslabs.com/torus#download"><b>Download</b></a> ·
+  <b>Download:</b>
+  <a href="https://lissajouslabs.com/download/torus/macos">macOS (.dmg)</a> ·
+  <a href="https://lissajouslabs.com/download/torus/windows">Windows (.zip)</a> ·
+  <a href="https://lissajouslabs.com/download/torus/linux">Linux (.zip)</a>
+</p>
+
+<p align="center">
   <a href="../../releases">All releases</a> ·
   <a href="https://lissajouslabs.com/faq">FAQ</a> ·
   <a href="SUPPORT.md">Support</a>
