@@ -42,7 +42,7 @@ jobs:
         name: ${{ fromJSON(github.event.inputs.platforms || '["macOS","Windows","Linux"]') }}
     steps:
       - name: Checkout Torus source (private, transient)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: marsDSP/Torus
           ref: ${{ github.event.inputs.ref }}
