@@ -101,8 +101,10 @@ jobs:
           echo "TORUS_BETA_END=$END" >> "$GITHUB_ENV"
 
       # Release artefacts only: the tests ran in Torus's CI before dispatch.
+      # The version is also the release tag; the plugin's update check
+      # compares it with the newest release on lissajouslabs.com.
       - name: Configure
-        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DTORUS_BETA_END=${{ env.TORUS_BETA_END }} -DTORUS_BUILD_TESTS=OFF ${{ env.CMAKE_EXTRA }}
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DTORUS_BETA_END=${{ env.TORUS_BETA_END }} -DTORUS_RELEASE_TAG=${{ github.event.inputs.version }} -DTORUS_BUILD_TESTS=OFF ${{ env.CMAKE_EXTRA }}
 
       # A bare -j is unbounded under make: a Linux runner was shut down
       # mid-compile. Four jobs match the hosted runners' core counts.
