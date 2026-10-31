@@ -1,5 +1,7 @@
 # Torus — Releases
 
+<img src="img/torus.png" alt="The Torus plugin interface" width="560">
+
 This repository hosts **release binaries only** for Torus, a spring reverb
 audio plugin (Standalone, VST3, CLAP, and AU on macOS).
 
