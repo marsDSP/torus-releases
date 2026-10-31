@@ -1,0 +1,68 @@
+name: Bug report
+description: Something in Torus crashes, sounds wrong or doesn't install.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing the Torus beta. One problem per report, please.
+  - type: input
+    id: version
+    attributes:
+      label: Torus version
+      description: The release tag you installed, from the Releases page or the file name.
+      placeholder: 0.1.0-beta-20261031-141829
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple silicon)
+        - macOS (Intel)
+        - Windows
+        - Linux
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: OS version
+      placeholder: macOS 15.1, Windows 11 24H2, Ubuntu 24.04
+  - type: dropdown
+    id: format
+    attributes:
+      label: Plugin format
+      multiple: true
+      options:
+        - VST3
+        - AU
+        - CLAP
+        - Standalone
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: DAW / host and version
+      placeholder: Ableton Live 12.1, Logic Pro 11, REAPER 7
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Load Torus on a stereo track
+        2. ...
+  - type: textarea
+    id: extra
+    attributes:
+      label: Logs, crash reports, screenshots
+      description: Drag files in here. A preset that triggers the problem helps a lot.

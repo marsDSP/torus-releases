@@ -1,25 +1,54 @@
-# Torus — Releases
+<h1 align="center">Torus</h1>
 
-<img src="img/torus.png" alt="The Torus plugin interface" width="560">
+<p align="center"><b>Spring Reverb Engine</b> by <a href="https://lissajouslabs.com">Lissajous Labs</a></p>
 
-This repository hosts **release binaries only** for Torus, a spring reverb
-audio plugin (Standalone, VST3, CLAP, and AU on macOS).
+<p align="center">
+  <img src="img/torus.png" alt="The Torus plugin interface" width="560">
+</p>
 
-See the [Releases](../../releases) page for downloads.
+<p align="center">
+  <a href="https://lissajouslabs.com/torus#download"><b>Download</b></a> ·
+  <a href="../../releases">All releases</a> ·
+  <a href="https://lissajouslabs.com/faq">FAQ</a> ·
+  <a href="SUPPORT.md">Support</a>
+</p>
+
+A stereo spring reverb with two engines: a physical model of the spring tank
+and a lighter parametric one. Free beta for macOS, Windows and Linux.
+
+This repository holds release builds only; the source is private.
+
+## Formats
+
+| Platform | File | Contains |
+|---|---|---|
+| macOS 11+ (universal) | `Torus-<version>-macOS.dmg` | VST3, AU, CLAP, Standalone |
+| Windows 10+ (x64) | `Torus-<version>-Windows.zip` | VST3, CLAP, Standalone |
+| Linux (x64) | `Torus-<version>-Linux.zip` | VST3, CLAP, Standalone |
 
 ## Installing
 
-- **macOS** (`Torus-<version>-macOS.dmg`): drag `Torus.vst3` onto
-  "VST3 Plug-Ins", `Torus.component` onto "AU Plug-Ins (Components)",
-  `Torus.clap` onto "CLAP Plug-Ins" (`/Library/Audio/Plug-Ins/CLAP`; create it
-  with `sudo mkdir -p /Library/Audio/Plug-Ins/CLAP` if it is missing) and
-  `Torus.app` onto "Applications". The per-user folders under
-  `~/Library/Audio/Plug-Ins/` work too. The beta is not signed yet; the DMG's
-  `Install.txt` has the one-line `xattr` command that clears the quarantine.
-- **Windows** (`Torus-<version>-Windows.zip`): copy `Torus.vst3` to
-  `C:\Program Files\Common Files\VST3` and `Torus.clap` to
-  `C:\Program Files\Common Files\CLAP`. `Torus.exe` is the standalone app.
-- **Linux** (`Torus-<version>-Linux.zip`): copy `Torus.vst3` to `~/.vst3` and
-  `Torus.clap` to `~/.clap`. `Torus` is the standalone app.
+**macOS.** Open the DMG and drag each item onto the folder link beside it:
+`Torus.vst3` to *VST3 Plug-Ins*, `Torus.component` to *AU Plug-Ins
+(Components)*, `Torus.clap` to *CLAP Plug-Ins* and `Torus.app` to
+*Applications*. If the CLAP folder doesn't exist yet, create it with
+`sudo mkdir -p /Library/Audio/Plug-Ins/CLAP`. The beta isn't signed yet: the
+DMG's `Install.txt` has the one-line command that lets macOS open it.
 
-Rescan plug-ins in your DAW after installing.
+**Windows.** Copy `Torus.vst3` to `C:\Program Files\Common Files\VST3` and
+`Torus.clap` to `C:\Program Files\Common Files\CLAP`. `Torus.exe` is the
+standalone app.
+
+**Linux.** Copy `Torus.vst3` to `~/.vst3` and `Torus.clap` to `~/.clap`.
+`Torus` is the standalone app.
+
+Rescan plug-ins in your DAW afterwards. Torus checks lissajouslabs.com for new
+releases (macOS and Windows) and lights its help icon when one is out.
+
+## Help
+
+- Install questions and the unsigned beta: the [FAQ](https://lissajouslabs.com/faq).
+- Bugs: [open an issue](../../issues/new/choose).
+- Anything else: [SUPPORT.md](SUPPORT.md). Security problems: [SECURITY.md](SECURITY.md).
+
+The beta is free to use under the [Lissajous Labs terms](https://lissajouslabs.com/terms).
